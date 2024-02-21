@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Select the button element
+    
     var scrollButton = document.getElementById('scrollButton');
   
-    // Select the section to scroll to
+   
     var targetSection = document.getElementById('targetSection');
   
-    // Add click event listener to the button
+   
     scrollButton.addEventListener('click', function() {
-      // Scroll the section into view
+      
       targetSection.scrollIntoView({ behavior: 'smooth' });
     });
   });
