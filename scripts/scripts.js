@@ -64,6 +64,7 @@ if(firstSeatNumber+1 >4){
 
 
 
+
 //  Updating seats number
   const seatsCount = getConvertedValue("seats-count");
   document.getElementById("seats-count").innerText = seatsCount + 1;
