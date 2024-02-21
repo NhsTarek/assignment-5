@@ -21,8 +21,6 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,900;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
     rel="stylesheet">
-
-
   <style>
     .font-raleway {
       font-family: "Raleway", sans-serif;
@@ -32,6 +30,13 @@
       font-family: "Inter", sans-serif;
     }
   </style>
+
+
+
+
+
+
+
 </head>
 
 <body>
@@ -87,7 +92,7 @@
             </h1>
             <p class="mb-5 font-inter text-lg">Download our official app Desh-Ticket to get more exciting discount &
               offers.Enjoy the best traveling experience with us, we ensure 100% safely and secured travels</p>
-            <button class="btn bg-[#1DD100] font-raleway mt-4 mb-4">Buy Tickets</button>
+            <button id="scrollButton" class="btn bg-[#1DD100] font-raleway mt-4 mb-4">Buy Tickets</button>
           </div>
         </div>
       </div>
@@ -178,7 +183,7 @@
 
     <!-- Ticket section -->
 
-    <section class="bg-[#F7F8F8] border-[#1DD100] border-t-2 rounded-lg py-28">
+    <section id="targetSection" class="bg-[#F7F8F8] border-[#1DD100] border-t-2 rounded-lg py-28">
 
       <div class="text-center space-y-4 pb-10">
         <h3 class="text-4xl font-bold font-raleway">Desh Paribahan</h3>
@@ -202,7 +207,7 @@
               </div>
               <div class="bg-[#1DD10026] flex rounded-lg items-center px-5 gap-2">
                 <img src="/images/seat-green.png" alt="">
-                <p class="font-inter font-medium text-[#1DD100]"><span>40</span> seats left</p>
+                <p class="font-inter font-medium text-[#1DD100]"><span id="seats-left">8</span> seats left</p>
 
 
               </div>
@@ -220,8 +225,10 @@
                 <h5 class="text-[#030712] font-raleway font-semibold">9:00 PM</h6>
               </div>
               <div class="flex justify-between p-6">
-                <h6 class="bg-[#EBECED] p-4 rounded-xl text-[#030712CC] font-inter font-medium">Boarding Point - Laxmipur</h6>
-                <h6 class="bg-[#EBECED] p-4 rounded-xl text-[#030712CC] font-inter font-medium">Dropping Point - Bogura</h6>
+                <h6 class="bg-[#EBECED] p-4 rounded-xl text-[#030712CC] font-inter font-medium">Boarding Point -
+                  Laxmipur</h6>
+                <h6 class="bg-[#EBECED] p-4 rounded-xl text-[#030712CC] font-inter font-medium">Dropping Point - Bogura
+                </h6>
                 <h6 class="bg-[#EBECED] p-4 rounded-xl text-[#030712CC] font-inter font-medium">Est. Time - 11 Hour</h6>
               </div>
             </div>
@@ -245,6 +252,111 @@
         </div>
       </div>
 
+      <!-- seat & Tickets Interface -->
+      <div class="grid grid-cols-2 bg-white max-w-6xl	m-auto rounded-2xl mt-5 gap-5">
+        <div class="form">
+          <div class="border-dashed border-b-2 p-5 justify-center">
+            <h4 class="text-2xl font-raleway font-semibold">Select Your Seat</h4>
+          </div>
+          <div class="flex justify-between p-5 border-dashed border-b-2">
+            <div class="flex gap-2 justify-center">
+              <img src="/images/seat-gray.png" alt="">
+              <h6 class="text-[#03071280] font-medium">Available</h6>
+            </div>
+            <div class="flex gap-2 justify-center">
+              <img src="/images/seat-green-filled.png" alt="">
+              <h6 class="text-[#1DD100] font-medium">Selected</h6>
+            </div>
+          </div>
+          <div class="flex items-center justify-between p-5 ">
+            <div class="invisible">
+
+            </div>
+            <div class="bg-[#0307121A] rounded-xl flex justify-center items-center w-28 h-14">
+              <img src="images/steering-wheel.svg" alt="">
+            </div>
+          </div>
+          <!-- seats start -->
+          <div id="seats-container" class="grid grid-cols-4 gap-4 pb-2 ml-2">
+
+            <div class="bg-[#F7F8F8] py-5 text-center rounded-lg all-btn">
+              <h6>A1</h6>
+            </div>
+            <div class="bg-[#F7F8F8] py-5 text-center rounded-lg all-btn">
+              <h6>A2</h6>
+            </div>
+            <div class="bg-[#F7F8F8] py-5 text-center rounded-lg all-btn">
+              <h6>A3</h6>
+            </div>
+            <div class="bg-[#F7F8F8] py-5 text-center rounded-lg all-btn">
+              <h6>A4</h6>
+            </div>
+            <div class="bg-[#F7F8F8] py-5 text-center rounded-lg all-btn">
+              <h6>B1</h6>
+            </div>
+            <div class="bg-[#F7F8F8] py-5 text-center rounded-lg all-btn">
+              <h6>B2</h6>
+            </div>
+            <div class="bg-[#F7F8F8] py-5 text-center rounded-lg all-btn">
+              <h6>B3</h6>
+            </div>
+            <div class="bg-[#F7F8F8] py-5 text-center rounded-lg all-btn">
+              <h6>B4</h6>
+            </div>
+
+          </div>
+        </div>
+        <div class="border-dashed border-l-2 my-2">
+          <div class="border-dashed border-b-2 p-4 justify-center ml-2">
+            <h4 class="text-2xl font-raleway font-semibold">Select Your Seat</h4>
+          </div>
+
+          <!-- selected seat section -->
+
+          <div class="bg-[#F7F8F8] w-[433px] mx-auto my-5 rounded-xl ">
+            <div class="selected-seats flex gap-5 justify-evenly pt-5">
+              <div class="seat text-[#030712] font-medium">Seat<span id="seats-count"
+                  class="bg-[#1DD100] p-2 rounded-xl ml-2"> 0</span></div>
+              <div class="seat-class text-[#030712] font-medium">Class</div>
+              <div class="price text-[#030712] font-medium">Price</div>
+
+            </div>
+            <div id="selected-container"></div>
+            <div class="divider w-full mx-auto"></div>
+            <div class="flex justify-between my-2 items-center px-20 py-2 text-[#030712] font-medium">
+              <h5>Total Price</h5>
+              <h2><span id="total-price">0</span></h2>
+            </div>
+            <div id="hide" class="text-center relative">
+              <input id="coupon-code" type="text" placeholder="Have any coupon?"
+                class="input input-bordered w-full max-w-xs py-8" />
+
+              <button id="apply-btn" onclick="updateGrandTotal('apply-btn')"
+                class="btn bg-[#1DD100] text-white absolute right-16 top-2">Apply</button>
+
+            </div>
+            <div class="flex justify-between items-center px-20 py-2 text-[#030712] font-medium">
+              <h5>Grand Total</h5>
+              <h2><span id="grand-total">0</span></h2>
+            </div>
+          </div>
+          <div class="w-[433px] mx-auto my-5 space-y-5">
+            <h5 class="text-[#030712] font-inter font-semibold">Passenger Name*</h5>
+            <input type="text" placeholder="Enter your name" class="input input-bordered w-full" />
+            <h5 class="text-[#030712] font-inter font-semibold">Phone Number*</h5>
+            <input type="text" placeholder="Enter your phone number" class="input input-bordered w-full" />
+            <h5 class="text-[#030712] font-inter font-semibold">Email ID</h5>
+            <input type="text" placeholder="Enter your email id" class="input input-bordered w-full" />
+            <br>
+            <!-- The button to open modal -->
+            <a href="#my_modal_8" class="btn w-full bg-[#1DD100]">Next</a>
+           
+          </div>
+          <div class="flex justify-between w-[433px] mx-auto my-5">
+            <a class="link link-hover text-[#03071299]">Terms & condition</a>
+            <a class="link link-hover text-[#03071299]">Return & refund policy</a>
+          </div>
+        </div>
 
     </section>
 
@@ -282,7 +394,21 @@
     </div>
 
   </footer>
-
+  <script src="/scripts/scripts.js"></script>
+  <div class="modal" role="dialog" id="my_modal_8">
+    <div class="modal-box text-center">
+      <div class="flex items-center justify-center">
+        <img src="/images/success.png" alt="">
+      </div>
+      <h3 class="font-bold text-lg">SUCCESS</h3>
+      <p class="py-4">Thank you for Booking Our Bus Seats.<br> 
+        We are working hard to find the best service and deals for you.<br> 
+        Shortly you will find a confirmation in your email.</p>
+      <div class="modal-action">
+        <a href="#" class="btn w-full bg-[#27AE60] rounded-3xl">Continue</a>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
